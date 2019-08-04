@@ -1,0 +1,235 @@
+{
+    "rules":[
+        {
+            "name":"ciclomotor",
+            "validFrom":"2019-01-01",
+            "validTo":"2019-12-31",
+            "rule":{
+                "conditions":{
+                    "all":[{
+                        "fact": "vehiculo",
+                        "operator": "equal",
+                        "value": "ciclomotor",
+                        "path": ".tipoVehiculo"
+                    }]
+                },
+                "event": {
+                    "type": "ciclomotor",
+                    "params": {
+                      "message": 172900
+                    }
+                }
+            }
+        },
+        {
+            "name":"vehiculos familiares menos de 1500 cc, menos de 10 años",
+            "validFrom":"2019-01-01",
+            "validTo":"2019-12-31",
+            "rule":{
+                "conditions":{
+                    "all":[{
+                        "fact": "vehiculo",
+                        "operator": "equal",
+                        "value": "vehiculos familiares",
+                        "path": ".tipoVehiculo"
+                    },
+                    {
+                        "fact": "vehiculo",
+                        "operator": "lessThan",
+                        "value": 1500,
+                        "path": ".cilindraje"
+                    },
+                    {
+                        "fact": "vehiculo",
+                        "operator": "lessThan",
+                        "value": 10,
+                        "path": ".antiguedad"
+                    }]
+                },
+                "event": {
+                    "type": "vehiculos familiares menos de 1500 cc, menos de 10 años",
+                    "params": {
+                      "message": 318100
+                    }
+                }
+            }
+        },
+        {
+            "name":"vehiculos familiares menos de 1500 cc, 10 o mas anos",
+            "validFrom":"2019-01-01",
+            "validTo":"2019-12-31",
+            "rule":{
+                "conditions":{
+                    "all":[{
+                        "fact": "vehiculo",
+                        "operator": "equal",
+                        "value": "vehiculos familiares",
+                        "path": ".tipoVehiculo"
+                    },
+                    {
+                        "fact": "vehiculo",
+                        "operator": "lessThan",
+                        "value": 1500,
+                        "path": ".cilindraje"
+                    },
+                    {
+                        "fact": "vehiculo",
+                        "operator": "greaterThanInclusive",
+                        "value": 10,
+                        "path": ".antiguedad"
+                    }]
+                },
+                "event": {
+                    "type": "vehiculos familiares menos de 1500 cc, 10 o mas anos",
+                    "params": {
+                      "message": 421750
+                    }
+                }
+            }
+        },
+        {
+            "name":"vehiculos familiares entre 1500 y 2500 cc, menos de 10 anos",
+            "validFrom":"2019-01-01",
+            "validTo":"2019-12-31",
+            "rule":{
+                "conditions":{
+                    "all":[{
+                        "fact": "vehiculo",
+                        "operator": "equal",
+                        "value": "vehiculos familiares",
+                        "path": ".tipoVehiculo"
+                    },
+                    {
+                        "fact": "vehiculo",
+                        "operator": "greaterThanInclusive",
+                        "value": 1500,
+                        "path": ".cilindraje"
+                    },
+                    {
+                        "fact": "vehiculo",
+                        "operator": "lessThanInclusive",
+                        "value": 2500,
+                        "path": ".cilindraje"
+                    },
+                    {
+                        "fact": "vehiculo",
+                        "operator": "lessThan",
+                        "value": 10,
+                        "path": ".antiguedad"
+                    }]
+                },
+                "event": {
+                    "type": "vehiculos familiares entre 1500 y 2500 cc, menos de 10 anos",
+                    "params": {
+                      "message": 387250
+                    }
+                }
+            }
+        },
+        {
+            "name":"vehiculos familiares entre 1500 y 2500 cc, 10 o mas anos",
+            "validFrom":"2019-01-01",
+            "validTo":"2019-12-31",
+            "rule":{
+                "conditions":{
+                    "all":[{
+                        "fact": "vehiculo",
+                        "operator": "equal",
+                        "value": "vehiculos familiares",
+                        "path": ".tipoVehiculo"
+                    },
+                    {
+                        "fact": "vehiculo",
+                        "operator": "greaterThanInclusive",
+                        "value": 1500,
+                        "path": ".cilindraje"
+                    },
+                    {
+                        "fact": "vehiculo",
+                        "operator": "lessThanInclusive",
+                        "value": 2500,
+                        "path": ".cilindraje"
+                    },
+                    {
+                        "fact": "vehiculo",
+                        "operator": "greaterThanInclusive",
+                        "value": 10,
+                        "path": ".antiguedad"
+                    }]
+                },
+                "event": {
+                    "type": "vehiculos familiares entre 1500 y 2500 cc, 10 o mas anos",
+                    "params": {
+                      "message": 481750
+                    }
+                }
+            }
+        },
+        {
+            "name":"vehiculos familiares mas de 2500 cc, menos de 10 anos",
+            "validFrom":"2019-01-01",
+            "validTo":"2019-12-31",
+            "rule":{
+                "conditions":{
+                    "all":[{
+                        "fact": "vehiculo",
+                        "operator": "equal",
+                        "value": "vehiculos familiares",
+                        "path": ".tipoVehiculo"
+                    },
+                    {
+                        "fact": "vehiculo",
+                        "operator": "greaterThan",
+                        "value": 2500,
+                        "path": ".cilindraje"
+                    },
+                    {
+                        "fact": "vehiculo",
+                        "operator": "lessThan",
+                        "value": 10,
+                        "path": ".antiguedad"
+                    }]
+                },
+                "event": {
+                    "type": "vehiculos familiares mas de 2500 cc, menos de 10 anos",
+                    "params": {
+                      "message": 452350
+                    }
+                }
+            }
+        },
+        {
+            "name":"vehiculos familiares mas de 2500 cc, 10 anos o mas",
+            "validFrom":"2019-01-01",
+            "validTo":"2019-12-31",
+            "rule":{
+                "conditions":{
+                    "all":[{
+                        "fact": "vehiculo",
+                        "operator": "equal",
+                        "value": "vehiculos familiares",
+                        "path": ".tipoVehiculo"
+                    },
+                    {
+                        "fact": "vehiculo",
+                        "operator": "greaterThan",
+                        "value": 2500,
+                        "path": ".cilindraje"
+                    },
+                    {
+                        "fact": "vehiculo",
+                        "operator": "greaterThanInclusive",
+                        "value": 10,
+                        "path": ".antiguedad"
+                    }]
+                },
+                "event": {
+                    "type": "vehiculos familiares mas de 2500 cc, 10 anos o mas",
+                    "params": {
+                      "message": 536350
+                    }
+                }
+            }
+        }
+    ]
+}

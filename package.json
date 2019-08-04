@@ -1,0 +1,24 @@
+{
+  "name": "process-soat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:dev": "nodemon ./src/index.js",
+    "test": "mocha ./test/**/*.test.js",
+    "test:controller": "mocha ./test/src/controller.test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "json-rules-engine": "^2.3.2",
+    "seneca": "^3.8.3"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.2.1",
+    "mocha": "^6.0.2",
+    "nodemon": "^1.18.10"
+  }
+}

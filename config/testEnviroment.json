@@ -1,0 +1,8 @@
+{
+    "vehiculo":{
+		"tipoVehiculo": "ciclomotor",
+		"modelo":2019,
+		"cilindraje":100,
+		"capCargaTon":5
+	}
+}
